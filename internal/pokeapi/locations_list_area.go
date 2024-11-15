@@ -7,7 +7,7 @@ import (
 )
 
 func (c *Client) ListLocationsArea(name string) (locationAreaExplore, error) {
-	url := locationURL + name
+	url := baseURL + "/location-area/" + name
 
 	if val, ok := c.cache.Get(url); ok {
 		locationResp := locationAreaExplore{}
